@@ -1,11 +1,9 @@
-export function add(numbers) {
+export function add(numbers) {  
   let sum = 0;
 
-  for (const number of numbers) {
-    if(isNaN(number)) {
-      return NaN;
-    }
 
+  for (const number of numbers) {
+  
     sum += +number;
   }
   return sum;
