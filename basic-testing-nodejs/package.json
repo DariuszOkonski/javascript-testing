@@ -13,6 +13,7 @@
     "express": "^4.17.3"
   },
   "devDependencies": {
+    "vite": "^3.0.9",
     "vitest": "^0.9.0"
   }
 }
