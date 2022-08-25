@@ -11,6 +11,14 @@ describe('transformToNumber()', () => {
         expect(result).toBeTypeOf('number');
     });
     
+    it('should transform a string number to a number of type number', () => {
+        const input = '1';
+
+        const result = transformToNumber(input);
+
+        expect(result).toBe(1)
+    })
+
     it('should yield NaN for non-transformable values', () => {
         const input = 'invalid';
         const input2 = {};
@@ -30,6 +38,7 @@ describe('cleanNumbers()', () => {
         const cleanedNumbers = cleanNumbers(numberValues);
 
         expect(cleanedNumbers[0]).toBeTypeOf('number');     
+        expect(cleanedNumbers).toEqual([1, 2])
     });
 
     it('should throw an error if an array with at least one empty string is provided', () => {
@@ -40,6 +49,6 @@ describe('cleanNumbers()', () => {
         }
 
         expect(cleanFn).toThrow();
-        expect(cleanFn).toThrow(/Invalid input/)
-    })
+        expect(cleanFn).toThrow(/Invalid input/);
+    });
 });
