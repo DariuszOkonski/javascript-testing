@@ -22,3 +22,4 @@ export function generateTokenPromise(userEmail) {
 //     console.log(token);
 // })
 
+// generateTokenPromise('test@test.com').then((token) => console.log(token));
