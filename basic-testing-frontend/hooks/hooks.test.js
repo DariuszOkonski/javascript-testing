@@ -1,14 +1,14 @@
-import { it, expect, beforeAll, beforeEach } from 'vitest';
+import { it, expect, beforeAll, beforeEach, afterEach, afterAll } from 'vitest';
 import { User } from './hooks';
 
 
 let testEmail = 'test@test.com';
 let user = new User(testEmail);
 
-beforeEach(() => {
+afterEach(() => {
     testEmail = 'test@test.com';
     user = new User(testEmail);
-})
+});
 
 it('should update the email', () => {
     const newTestEmail = 'test2@test.com';
